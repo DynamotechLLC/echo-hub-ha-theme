@@ -1,0 +1,72 @@
+###############################################################################
+# Echo Hub — theme for the Echo Hub dashboard (github.com/DynamotechLLC/echo-hub).
+# Light and dark modes. Load with `frontend: themes: !include_dir_merge_named themes`.
+# Font: Figtree (add https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&display=swap
+# as a CSS dashboard resource; without it the system font is used).
+###############################################################################
+Echo Hub:
+  primary-font-family: &font "Figtree, Roboto, system-ui, sans-serif"
+  paper-font-common-base_-_font-family: *font
+  ha-font-family-body: *font
+  ha-font-family-heading: *font
+  mdc-typography-font-family: *font
+  ha-card-border-radius: "20px"
+  ha-card-border-width: "0px"
+  ha-card-box-shadow: "none"
+  ha-badge-border-width: "0px"
+  echo-accent: &teal "#1E8BB0"
+  echo-accent-deep: "#136F8F"
+  echo-heat: "#E5484D"
+  echo-cool: "#2F80ED"
+  echo-ok: "#2E9E6B"
+  echo-warn: "#E8A33D"
+  echo-home: "#2E8B6E"
+  primary-color: *teal
+  accent-color: *teal
+  state-active-color: *teal
+  state-icon-active-color: *teal
+  state-light-active-color: *teal
+  state-fan-active-color: *teal
+  state-switch-active-color: *teal
+  switch-checked-color: *teal
+  switch-checked-button-color: *teal
+  switch-checked-track-color: *teal
+  modes:
+    light:
+      lovelace-background: "linear-gradient(160deg, #D9DEE3 0%, #C9D3DC 100%)"
+      primary-background-color: "#D9DEE3"
+      secondary-background-color: "#E9ECEF"
+      app-header-background-color: "#D9DEE3"
+      app-header-text-color: "#1B2733"
+      sidebar-background-color: "#D9DEE3"
+      card-background-color: "#F4F6F8"
+      ha-card-background: "#F4F6F8"
+      ha-dialog-surface-background: "#F4F6F8"
+      divider-color: "#D3D9DF"
+      primary-text-color: "#1B2733"
+      secondary-text-color: "#6B7785"
+      sidebar-text-color: "#1B2733"
+      sidebar-icon-color: "#6B7785"
+      state-icon-color: "#1B2733"
+      echo-tile: "#F4F6F8"
+      echo-panel: "rgba(255, 255, 255, 0.35)"
+      echo-pill: "rgba(255, 255, 255, 0.78)"
+    dark:
+      lovelace-background: "linear-gradient(160deg, #141C24 0%, #0E141A 100%)"
+      primary-background-color: "#11181F"
+      secondary-background-color: "#18212A"
+      app-header-background-color: "#11181F"
+      app-header-text-color: "#E6EBF0"
+      sidebar-background-color: "#11181F"
+      card-background-color: "#1C252E"
+      ha-card-background: "#1C252E"
+      ha-dialog-surface-background: "#1C252E"
+      divider-color: "#2A3540"
+      primary-text-color: "#E6EBF0"
+      secondary-text-color: "#93A1AE"
+      sidebar-text-color: "#E6EBF0"
+      sidebar-icon-color: "#93A1AE"
+      state-icon-color: "#E6EBF0"
+      echo-tile: "#1C252E"
+      echo-panel: "rgba(255, 255, 255, 0.05)"
+      echo-pill: "rgba(28, 37, 46, 0.9)"
