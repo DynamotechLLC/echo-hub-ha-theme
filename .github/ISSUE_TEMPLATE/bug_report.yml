@@ -1,0 +1,89 @@
+name: Bug report
+description: A colour, font or variable in the Echo Hub theme looks wrong or does not apply.
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. Please fill in every required field so the problem can be reproduced.
+        Dashboard layout, cards or errors in Echo Hub itself belong in the [Echo Hub repository](https://github.com/DynamotechLLC/echo-hub/issues/new/choose).
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I searched the existing issues and this is not a duplicate.
+          required: true
+        - label: I am on the latest theme release, ran "Reload themes" (or restarted) and reloaded the browser.
+          required: true
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Mode
+      multiple: true
+      options:
+        - Light
+        - Dark
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: Which screen or card looks wrong, and how.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Select the Echo Hub theme in the profile (dark mode)
+        2. Open Settings → Devices
+        3. See ...
+    validations:
+      required: true
+  - type: textarea
+    id: config
+    attributes:
+      label: How the theme is loaded
+      description: Your `frontend:` section of configuration.yaml, and any theme overrides (card-mod, user themes).
+      render: yaml
+    validations:
+      required: true
+  - type: input
+    id: theme_version
+    attributes:
+      label: Theme version
+      placeholder: v0.1.0
+    validations:
+      required: true
+  - type: input
+    id: ha_version
+    attributes:
+      label: Home Assistant version
+      description: Settings → About.
+      placeholder: "2026.10.0"
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and device
+      placeholder: "Safari on iPad, Home Assistant app on Android, ..."
+    validations:
+      required: true
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: A screenshot shows a theme problem best. Hide anything private.
+    validations:
+      required: true
